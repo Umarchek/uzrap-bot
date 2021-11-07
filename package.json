@@ -1,0 +1,23 @@
+{
+  "name": "uzrap-bot",
+  "version": "1.0.0",
+  "description": "bu botda siz uzbek reperlarni qo'shiqlarini topishingiz mumkun",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UZBase/uzrap-bot.git"
+  },
+  "author": "Umarjon Sharofiddinov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UZBase/uzrap-bot/issues"
+  },
+  "homepage": "https://github.com/UZBase/uzrap-bot#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.54.0",
+    "nodemon": "^2.0.14"
+  }
+}
