@@ -106,7 +106,7 @@ const start = () => {
 
                                 {
                                     text: `Mayus Taronam`,
-                                    callback_data: "d-taronam ",
+                                    callback_data: "d-taronam",
                                 },
                                 {
                                     text: `Kechiring ona`,
@@ -117,7 +117,7 @@ const start = () => {
 
                                 {
                                     text: `Eslama Meni`,
-                                    callback_data: "d-meni ",
+                                    callback_data: "d-meni",
                                 },
                                 {
                                     text: `Qo'g'irchoq`,
@@ -137,7 +137,7 @@ const start = () => {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga`,
+                                    text: `Orqaga ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -154,7 +154,7 @@ const start = () => {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga`,
+                                    text: `Orqaga ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -171,7 +171,92 @@ const start = () => {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga`,
+                                    text: `Orqaga ◀️`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "d-tamom":
+                const Tamom = fs.readFileSync('musics/Tamom.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, Tamom, {
+                    caption: `Sevgimiz Tamom🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga ◀️`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "d-taronam":
+                const taronam = fs.readFileSync('musics/taronam.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, taronam, {
+                    caption: `Mayus Taronam🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga ◀️`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "d-ona":
+                const ona = fs.readFileSync('musics/ona.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, ona, {
+                    caption: `Kechiring ona🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga ◀️`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "d-meni":
+                const meni = fs.readFileSync('musics/meni.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, meni, {
+                    caption: `Eslama Meni🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga ◀️`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "d-irchoq":
+                const irchoq = fs.readFileSync('musics/irchoq.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, irchoq, {
+                    caption: `Qo'g'irchoq🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
