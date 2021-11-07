@@ -76,7 +76,6 @@ const start = () => {
         const chatId = query.from.id
         switch (query.data) {
             case "Doxxim":
-                bot.deleteMessage(chat.id, message_id)
                 await bot.sendPhoto(chat.id, 'https://avatars.mds.yandex.net/i?id=c6e00ed80e9628bc82efde8922a2515c-5115418-images-thumbs&n=13', {
                     caption: `Doxxim taronalarini pasroqda tanglashingiz mumkun !`,
                     parse_mode: "HTML",
@@ -130,8 +129,8 @@ const start = () => {
                 });
                 break;
             case "d-Gulim":
-                const buffer = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
-                bot.sendAudio(chatId, buffer, {
+                const Gulim = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, Gulim, {
                     caption: `Chiroyligim Gulim🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
@@ -145,7 +144,41 @@ const start = () => {
                         ],
                     },
                 });
-
+                break
+            case "d-kir":
+                const kir = fs.readFileSync('musics/kir.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, kir, {
+                    caption: `Tushlarimga kir🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "d-uchun":
+                const uchun = fs.readFileSync('musics/uchun.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, uchun, {
+                    caption: `U Men uchun🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
         }
     });
 }
