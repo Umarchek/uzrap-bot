@@ -1,5 +1,6 @@
 const TelegramBot = require("node-telegram-bot-api");
 const TOKEN = "1955321733:AAE_g8WJ04Txd0pGTTea8TQbBwJUZK0WP-U";
+const fs = require('fs')
 const bot = new TelegramBot(TOKEN, {
     polling: true,
     updates: {
@@ -23,7 +24,8 @@ const start = () => {
             bot.deleteMessage(chatId, message_id);
             bot.sendPhoto(
                 chat.id, "images/first.jpg", {
-                caption: `Salom <b>${name}</b>.\nQaysi uzbek reperni musiqasi sizga yoqadi?`,
+                caption: `Salom <b>${name}</b>.Uᴢʀᴇᴘ ᴏʟᴀᴍɪᴅᴀɢɪ ᴇɴɢ ᴍᴀsʜʜᴜʀ ᴠᴀ ᴀsʜᴜʟᴀsɪ ᴋᴏɴɢɪʟɢᴀ ʏᴀǫɪɴ ᴋᴇʟᴀᴅɪɢᴀɴ ʀᴇᴘᴇʀ ᴠᴀ ʜɪᴘʜᴏᴘ ᴜsᴛᴀʟᴀʀɪɴɪ ɪᴊᴏᴅ ᴍᴀʜsᴜʟɪɴɪ ʏᴏʀɪᴛɪʙ ʙᴏʀᴜᴠᴄʜɪ ʙᴏᴛɪᴍɪᴢɢᴀ ʜᴜsʜ ᴋᴇʟɪʙsɪᴢ
+                ǫᴀʏsɪ ɪᴊᴏᴅᴋᴏʀɪᴍɪᴢɴɪ ᴛᴀɴʟᴀʏsɪᴢ🎤🎧`,
                 parse_mode: "HTML",
                 reply_markup: {
                     inline_keyboard: [
@@ -71,8 +73,78 @@ const start = () => {
     })
     bot.on("callback_query", async (query) => {
         const { chat, message_id, text } = query.message;
-        const chatId = message.chat.id;
+        const chatId = query.from.id
         switch (query.data) {
+            case "Doxxim":
+                bot.deleteMessage(chat.id, message_id)
+                await bot.sendPhoto(chat.id, 'https://avatars.mds.yandex.net/i?id=c6e00ed80e9628bc82efde8922a2515c-5115418-images-thumbs&n=13', {
+                    caption: `Doxxim taronalarini pasroqda tanglashingiz mumkun !`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Chiroyligim Gulim`,
+                                    callback_data: "d-Gulim",
+                                },
+                                {
+                                    text: `Tushlarimga kir`,
+                                    callback_data: "d-kir",
+                                },
+
+                            ],
+                            [
+                                {
+                                    text: `U Men uchun`,
+                                    callback_data: "d-uchun",
+                                },
+                                {
+                                    text: `Sevgimiz Tamom`,
+                                    callback_data: "d-tamom",
+                                },
+                            ],
+                            [
+
+                                {
+                                    text: `Mayus Taronam`,
+                                    callback_data: "d-taronam ",
+                                },
+                                {
+                                    text: `Kechiring ona`,
+                                    callback_data: "d-ona",
+                                },
+                            ],
+                            [
+
+                                {
+                                    text: `Eslama Meni`,
+                                    callback_data: "d-meni ",
+                                },
+                                {
+                                    text: `Qo'g'irchoq`,
+                                    callback_data: "d-irchoq ",
+                                },
+                            ],
+                        ],
+                    },
+                });
+                break;
+            case "d-Gulim":
+                const buffer = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, buffer, {
+                    caption: `Chiroyligim Gulim🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `Orqaga`,
+                                    callback_data: `Doxxim`,
+                                },
+                            ]
+                        ],
+                    },
+                });
 
         }
     });
