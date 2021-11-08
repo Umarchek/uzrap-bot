@@ -231,6 +231,46 @@ const start = () => {
                     },
                 })
                 break
+            case "Uzboom":
+                bot.sendPhoto(chatId, 'https://static10.tgstat.ru/channels/_0/6b/6be4d4d49f1057f095a61d2b8a10f652.jpg', {
+                    caption: `🔪ᴜᴢʙᴏᴏᴍ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !🔪`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴍᴀʀɪᴊᴜᴀɴᴀ`,
+                                    callback_data: "u-marijuana",
+                                },
+                                {
+                                    text: `ᴜᴍʀ ᴋɪᴛᴏʙ`,
+                                    callback_data: "u-kitob",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʏɪʟʟᴀʀ`,
+                                    callback_data: "u-yillar",
+                                },
+                                {
+                                    text: `ɴᴏʙᴜᴅ 3`,
+                                    callback_data: "u-nobud",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙɪʀ ǫᴀᴅᴀᴍ`,
+                                    callback_data: "u-qadam",
+                                },
+                                {
+                                    text: `ʙɪᴛᴄʜ`,
+                                    callback_data: "u-bitch",
+                                },
+                            ],
+                        ],
+                    },
+                })
+                break
             case "d-Gulim":
                 const Gulim = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, Gulim, {
@@ -469,7 +509,40 @@ const start = () => {
                     },
                 });
                 break
-
+            case "u-marijuana":
+                const marijuana = fs.readFileSync('musics/u-marijuana.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, marijuana, {
+                    caption: `ᴍᴀʀɪᴊᴜᴀɴᴀ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "u-kitob":
+                const kitob = fs.readFileSync('musics/u-kitob.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, kitob, {
+                    caption: `ᴜᴍʀ ᴋɪᴛᴏʙ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
         }
     });
 }
