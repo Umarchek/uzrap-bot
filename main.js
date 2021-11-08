@@ -75,6 +75,57 @@ const start = () => {
         const { chat, message_id, text } = query.message;
         const chatId = query.from.id
         switch (query.data) {
+            case 'Boshiga':
+                bot.deleteMessage(chatId, message_id);
+                await bot.sendPhoto(
+                    chat.id, "images/first.jpg", {
+                    caption: `Uᴢʀᴇᴘ ᴏʟᴀᴍɪᴅᴀɢɪ ᴇɴɢ ᴍᴀsʜʜᴜʀ ᴠᴀ ᴀsʜᴜʟᴀsɪ ᴋᴏɴɢɪʟɢᴀ ʏᴀǫɪɴ ᴋᴇʟᴀᴅɪɢᴀɴ ʀᴇᴘᴇʀ ᴠᴀ ʜɪᴘʜᴏᴘ ᴜsᴛᴀʟᴀʀɪɴɪ ɪᴊᴏᴅ ᴍᴀʜsᴜʟɪɴɪ ʏᴏʀɪᴛɪʙ ʙᴏʀᴜᴠᴄʜɪ ʙᴏᴛɪᴍɪᴢɢᴀ ʜᴜsʜ ᴋᴇʟɪʙsɪᴢ
+                        ǫᴀʏsɪ ɪᴊᴏᴅᴋᴏʀɪᴍɪᴢɴɪ ᴛᴀɴʟᴀʏsɪᴢ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `💔ᴅᴏxxɪᴍ💔`,
+                                    callback_data: `Doxxim`,
+                                },
+                                {
+                                    text: `❤️‍🩹ᴍ1ɴᴏʀ❤️‍🩹`,
+                                    callback_data: `M1nor`,
+                                },
+                                {
+                                    text: `🔪ᴜᴢʙᴏᴏᴍ🔪`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ],
+                            [
+                                {
+                                    text: `🪓ᴋᴏɴsᴛᴀ🪓`,
+                                    callback_data: `Konsta`,
+                                },
+                                {
+                                    text: `🪚ғᴀʏᴢᴇᴇ🪚`,
+                                    callback_data: `Fayzee`,
+                                },
+                                {
+                                    text: `💉ᴍᴏʀғ💉`,
+                                    callback_data: `Morf`,
+                                },
+
+                            ],
+                            [
+                                {
+                                    text: `🚬ʏᴀɢᴢᴏɴ🚬`,
+                                    callback_data: `yangoz`,
+                                },
+                            ]
+                        ],
+                    },
+
+
+
+                })
+                break
             case "Doxxim":
                 await bot.sendPhoto(chat.id, 'https://avatars.mds.yandex.net/i?id=c6e00ed80e9628bc82efde8922a2515c-5115418-images-thumbs&n=13', {
                     caption: `ᴅᴏxxɪᴍ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !`,
@@ -134,6 +185,52 @@ const start = () => {
                     },
                 });
                 break;
+            case "M1nor":
+                bot.sendPhoto(chatId, 'https://muzfm.tv/uploads/singers/photos/m1nor.jpg', {
+                    caption: `❤️‍🩹ᴍ1ɴᴏʀ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !❤️‍🩹`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴍᴇɴᴛᴀʟɪᴛᴇᴛ`,
+                                    callback_data: "m-mentalitet",
+                                },
+                                {
+                                    text: `ᴏᴢᴏᴅᴍᴀɴ`,
+                                    callback_data: "m-ozodman",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏʟᴀʟɪᴋ`,
+                                    callback_data: "m-bolalik",
+                                },
+                                {
+                                    text: `ᴅᴏ'sᴛɪɴɢᴍᴀɴ`,
+                                    callback_data: "m-dust",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `sᴏ'ɴɢɢɪ xᴀᴛ..`,
+                                    callback_data: "m-xat",
+                                },
+                                {
+                                    text: `ʙᴏ'ʟᴅɪ ᴛᴀᴍᴏᴍ`,
+                                    callback_data: "m-tamom",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
+                        ],
+                    },
+                })
+                break
             case "d-Gulim":
                 const Gulim = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, Gulim, {
@@ -269,103 +366,6 @@ const start = () => {
                         ],
                     },
                 });
-                break
-            case 'Boshiga':
-                bot.deleteMessage(chatId, message_id);
-                await bot.sendPhoto(
-                    chat.id, "images/first.jpg", {
-                    caption: `Uᴢʀᴇᴘ ᴏʟᴀᴍɪᴅᴀɢɪ ᴇɴɢ ᴍᴀsʜʜᴜʀ ᴠᴀ ᴀsʜᴜʟᴀsɪ ᴋᴏɴɢɪʟɢᴀ ʏᴀǫɪɴ ᴋᴇʟᴀᴅɪɢᴀɴ ʀᴇᴘᴇʀ ᴠᴀ ʜɪᴘʜᴏᴘ ᴜsᴛᴀʟᴀʀɪɴɪ ɪᴊᴏᴅ ᴍᴀʜsᴜʟɪɴɪ ʏᴏʀɪᴛɪʙ ʙᴏʀᴜᴠᴄʜɪ ʙᴏᴛɪᴍɪᴢɢᴀ ʜᴜsʜ ᴋᴇʟɪʙsɪᴢ
-                    ǫᴀʏsɪ ɪᴊᴏᴅᴋᴏʀɪᴍɪᴢɴɪ ᴛᴀɴʟᴀʏsɪᴢ🎤🎧`,
-                    parse_mode: "HTML",
-                    reply_markup: {
-                        inline_keyboard: [
-                            [
-                                {
-                                    text: `💔ᴅᴏxxɪᴍ💔`,
-                                    callback_data: `Doxxim`,
-                                },
-                                {
-                                    text: `❤️‍🩹ᴍ1ɴᴏʀ❤️‍🩹`,
-                                    callback_data: `M1nor`,
-                                },
-                                {
-                                    text: `🔪ᴜᴢʙᴏᴏᴍ🔪`,
-                                    callback_data: `Uzboom`,
-                                },
-                            ],
-                            [
-                                {
-                                    text: `🪓ᴋᴏɴsᴛᴀ🪓`,
-                                    callback_data: `Konsta`,
-                                },
-                                {
-                                    text: `🪚ғᴀʏᴢᴇᴇ🪚`,
-                                    callback_data: `Fayzee`,
-                                },
-                                {
-                                    text: `💉ᴍᴏʀғ💉`,
-                                    callback_data: `Morf`,
-                                },
-
-                            ],
-                            [
-                                {
-                                    text: `🚬ʏᴀɢᴢᴏɴ🚬`,
-                                    callback_data: `yangoz`,
-                                },
-                            ]
-                        ],
-                    },
-
-
-
-                })
-                break
-            case "M1nor":
-                bot.sendPhoto(chatId, 'https://muzfm.tv/uploads/singers/photos/m1nor.jpg', {
-                    caption: `❤️‍🩹ᴍ1ɴᴏʀ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !❤️‍🩹`,
-                    parse_mode: "HTML",
-                    reply_markup: {
-                        inline_keyboard: [
-                            [
-                                {
-                                    text: `ᴍᴇɴᴛᴀʟɪᴛᴇᴛ`,
-                                    callback_data: "m-mentalitet",
-                                },
-                                {
-                                    text: `ᴏᴢᴏᴅᴍᴀɴ`,
-                                    callback_data: "m-ozodman",
-                                },
-                            ],
-                            [
-                                {
-                                    text: `ʙᴏʟᴀʟɪᴋ`,
-                                    callback_data: "m-bolalik",
-                                },
-                                {
-                                    text: `ᴅᴏ'sᴛɪɴɢᴍᴀɴ`,
-                                    callback_data: "m-dust",
-                                },
-                            ],
-                            [
-                                {
-                                    text: `sᴏ'ɴɢɢɪ xᴀᴛ..`,
-                                    callback_data: "m-xat",
-                                },
-                                {
-                                    text: `ʙᴏ'ʟᴅɪ ᴛᴀᴍᴏᴍ`,
-                                    callback_data: "m-tamom",
-                                },
-                            ],
-                            [
-                                {
-                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
-                                    callback_data: "Boshiga",
-                                },
-                            ],
-                        ],
-                    },
-                })
                 break
             case "m-mentalitet":
                 const mentalitet = fs.readFileSync('musics/m-mentalitet.mp3'); // sync! that's sad! :-( Just making a point!
