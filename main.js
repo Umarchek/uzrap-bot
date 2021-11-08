@@ -61,7 +61,7 @@ const start = () => {
                         [
                             {
                                 text: `🚬ʏᴀɢᴢᴏɴ🚬`,
-                                callback_data: `yangoz`,
+                                callback_data: `yagnoz`,
                             },
                         ]
                     ],
@@ -116,7 +116,7 @@ const start = () => {
                             [
                                 {
                                     text: `🚬ʏᴀɢᴢᴏɴ🚬`,
-                                    callback_data: `yangoz`,
+                                    callback_data: `yagnoz`,
                                 },
                             ]
                         ],
@@ -343,7 +343,8 @@ const start = () => {
                 })
                 break
             case "Morf":
-                bot.sendMessage(chatId, '💉ᴍᴏʀғ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !💉', {
+                bot.sendPhoto(chatId, 'images/third.jpg', {
+                    caption: '💉ᴍᴏʀғ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !💉',
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
@@ -365,6 +366,37 @@ const start = () => {
                                 {
                                     text: `ᴋᴇ ʙᴜɢᴜɴᴍᴀs`,
                                     callback_data: "mo-bugunmas",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
+                        ],
+                    },
+                })
+                break
+            case 'yagnoz':
+                bot.sendMessage(chatId, '🚬ʏᴀɢᴢᴏɴ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !🚬', {
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴀʏᴛ`,
+                                    callback_data: "ya-ayt",
+                                },
+                                {
+                                    text: `ᴜɴᴜᴛᴏʟᴀsᴀɴᴍɪ ᴀʏᴛ`,
+                                    callback_data: "ya-unu",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴜɢᴜɴ ᴜɴɪ ᴛᴏ'ʏɪ`,
+                                    callback_data: "ya-tuyi",
                                 },
                             ],
                             [
@@ -898,6 +930,57 @@ const start = () => {
                                 {
                                     text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Morf`,
+                                },
+                            ]
+                        ],
+                    },
+                })
+                break
+            case "ya-ayt":
+                const ya_ayt = fs.readFileSync('musics/ya-ayt.mp3');
+                bot.sendAudio(chatId, ya_ayt, {
+                    caption: 'ᴀʏᴛ🎤🎧',
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `yangoz`,
+                                },
+                            ]
+                        ],
+                    },
+                })
+                break
+            case "ya-unu":
+                const ya_unu = fs.readFileSync('musics/ya-ayt.mp3');
+                bot.sendAudio(chatId, ya_unu, {
+                    caption: 'ᴜɴᴜᴛᴏʟᴀsᴀɴᴍɪ ᴀʏᴛ🎤🎧',
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `yangoz`,
+                                },
+                            ]
+                        ],
+                    },
+                })
+                break
+            case "ya-tuyi":
+                const ya_tuyi = fs.readFileSync('musics/ya-ayt.mp3');
+                bot.sendAudio(chatId, ya_tuyi, {
+                    caption: 'ᴀʏᴛ🎤🎧',
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `yangoz`,
                                 },
                             ]
                         ],
