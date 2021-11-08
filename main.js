@@ -379,7 +379,8 @@ const start = () => {
                 })
                 break
             case 'yagnoz':
-                bot.sendMessage(chatId, '🚬ʏᴀɢᴢᴏɴ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !🚬', {
+                bot.sendPhoto(chatId, 'images/yagzon.jpg', {
+                    caption: '🚬ʏᴀɢᴢᴏɴ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !🚬',
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
