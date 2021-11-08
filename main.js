@@ -121,9 +121,6 @@ const start = () => {
                             ]
                         ],
                     },
-
-
-
                 })
                 break
             case "Doxxim":
@@ -265,6 +262,42 @@ const start = () => {
                                 {
                                     text: `ʙɪᴛᴄʜ`,
                                     callback_data: "u-bitch",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
+                        ],
+                    },
+                })
+                break
+            case "Konsta":
+                bot.sendPhoto(chatId, 'https://muzfm.tv/uploads/posts/2020-07/1596005155_konsta.jpg', {
+                    caption: `🪓ᴋᴏɴsᴛᴀ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !🪓`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ɴᴀꜰᴀs`,
+                                    callback_data: "k-nafas",
+                                },
+                                {
+                                    text: `ᴊɪɴɴɪxᴏɴᴀ`,
+                                    callback_data: "k-jinnixona",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ᴍᴏ'ᴊɪᴢᴀʟᴀʀ`,
+                                    callback_data: "k-jizalar",
+                                },
+                                {
+                                    text: `ᴜʏᴀᴛ`,
+                                    callback_data: "k-uyat",
                                 },
                             ],
                             [
@@ -611,6 +644,74 @@ const start = () => {
                                 {
                                     text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "k-nafas":
+                const nafas = fs.readFileSync('musics/k-nafas.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, nafas, {
+                    caption: `ɴᴀꜰᴀs🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Konsta`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "k-jinnixona":
+                const jinnixona = fs.readFileSync('musics/k-jinnixona.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, jinnixona, {
+                    caption: `ᴊɪɴɴɪxᴏɴᴀ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Konsta`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "k-jizalar":
+                const jizalar = fs.readFileSync('musics/k-jizalar.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, jizalar, {
+                    caption: `ᴍᴏ'ᴊɪᴢᴀʟᴀʀ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Konsta`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "k-uyat":
+                const uyat = fs.readFileSync('musics/k-uyat.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, uyat, {
+                    caption: `ᴜʏᴀᴛ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Konsta`,
                                 },
                             ]
                         ],
