@@ -310,6 +310,38 @@ const start = () => {
                     },
                 })
                 break
+            case "Fayzee":
+                bot.sendPhoto(chatId, 'https://n1.quvonch.com/uploads/posts/artis/fayzee.jpg', {
+                    caption: `🪚ғᴀʏᴢᴇᴇ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !🪚`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴀsɪʀɪɴɢ`,
+                                    callback_data: "f-asiring",
+                                },
+                                {
+                                    text: `ʙᴜʟᴀ ᴏʟᴍᴀᴅɪᴍ ʏᴏʀ`,
+                                    callback_data: "f-yor",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʜᴀᴛᴏᴛɪᴍ ᴋɪᴛᴏʙɪ`,
+                                    callback_data: "f-kitobi",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
+                        ],
+                    },
+                })
+                break
             case "d-Gulim":
                 const Gulim = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, Gulim, {
@@ -712,6 +744,57 @@ const start = () => {
                                 {
                                     text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Konsta`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "f-asiring":
+                const asiring = fs.readFileSync('musics/f-asiring.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, asiring, {
+                    caption: `ᴀsɪʀɪɴɢ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Fayzee`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "f-yor":
+                const yor = fs.readFileSync('musics/f-yor.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, yor, {
+                    caption: `ʜᴀᴛᴏᴛɪᴍ ᴋɪᴛᴏʙɪ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Fayzee`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+                case "f-kitobi":
+                const kitobi = fs.readFileSync('musics/f-kitobi.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, kitobi, {
+                    caption: `ᴀsɪʀɪɴɢ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Fayzee`,
                                 },
                             ]
                         ],
