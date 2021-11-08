@@ -267,6 +267,12 @@ const start = () => {
                                     callback_data: "u-bitch",
                                 },
                             ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
                         ],
                     },
                 })
@@ -530,6 +536,74 @@ const start = () => {
                 const kitob = fs.readFileSync('musics/u-kitob.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, kitob, {
                     caption: `ᴜᴍʀ ᴋɪᴛᴏʙ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "u-yillar":
+                const yillar = fs.readFileSync('musics/u-yillar.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, yillar, {
+                    caption: `ʏɪʟʟᴀʀ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "u-nobud":
+                const nobud = fs.readFileSync('musics/u-nobud.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, nobud, {
+                    caption: `ɴᴏʙᴜᴅ 3🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "u-qadam":
+                const qadam = fs.readFileSync('musics/u-qadam.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, qadam, {
+                    caption: `ʙɪʀ ǫᴀᴅᴀᴍ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "u-bitch":
+                const bitch = fs.readFileSync('musics/u-bitch.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, bitch, {
+                    caption: `ʙɪᴛᴄʜ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
