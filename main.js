@@ -322,7 +322,6 @@ const start = () => {
                 })
                 break
             case "M1nor":
-                bot.deleteMessage(chatId, message_id)
                 bot.sendPhoto(chatId, 'https://muzfm.tv/uploads/singers/photos/m1nor.jpg', {
                     caption: `❤️‍🩹ᴍ1ɴᴏʀ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !❤️‍🩹`,
                     parse_mode: "HTML",
@@ -330,14 +329,33 @@ const start = () => {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `ᴄʜɪʀᴏʏʟɪɢɪᴍ ɢᴜʟɪᴍ`,
-                                    callback_data: "d-Gulim",
+                                    text: `ᴍᴇɴᴛᴀʟɪᴛᴇᴛ`,
+                                    callback_data: "m-mentalitet",
                                 },
                                 {
-                                    text: `ᴛᴜsʜʟᴀʀɪᴍɢᴀ ᴋɪʀ`,
-                                    callback_data: "d-kir",
+                                    text: `ᴏᴢᴏᴅᴍᴀɴ`,
+                                    callback_data: "m-ozodman",
                                 },
-
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏʟᴀʟɪᴋ`,
+                                    callback_data: "m-bolalik",
+                                },
+                                {
+                                    text: `ᴅᴏ'sᴛɪɴɢᴍᴀɴ`,
+                                    callback_data: "m-dust",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `sᴏ'ɴɢɢɪ xᴀᴛ..`,
+                                    callback_data: "m-xat",
+                                },
+                                {
+                                    text: `ʙᴏ'ʟᴅɪ ᴛᴀᴍᴏᴍ`,
+                                    callback_data: "m-tamom",
+                                },
                             ],
                             [
                                 {
@@ -349,6 +367,109 @@ const start = () => {
                     },
                 })
                 break
+            case "m-mentalitet":
+                const mentalitet = fs.readFileSync('musics/m-mentalitet.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, mentalitet, {
+                    caption: `ᴍᴇɴᴛᴀʟɪᴛᴇᴛ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `M1nor`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "m-ozodman":
+                const ozodman = fs.readFileSync('musics/m-ozodman.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, ozodman, {
+                    caption: `ᴏᴢᴏᴅᴍᴀɴ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `M1nor`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "m-bolalik":
+                const bolalik = fs.readFileSync('musics/m-bolalik.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, bolalik, {
+                    caption: `ʙᴏʟᴀʟɪᴋ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `M1nor`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "m-dust":
+                const dust = fs.readFileSync('musics/m-dust.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, dust, {
+                    caption: `ᴅᴏ'sᴛɪɴɢᴍᴀɴ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `M1nor`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "m-xat":
+                const xat = fs.readFileSync('musics/m-xat.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, xat, {
+                    caption: `sᴏ'ɴɢɢɪ xᴀᴛ..🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `M1nor`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "m-tamom":
+                const tamom = fs.readFileSync('musics/m-tamom.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, tamom, {
+                    caption: `ʙᴏ'ʟᴅɪ ᴛᴀᴍᴏᴍ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `M1nor`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+
         }
     });
 }
