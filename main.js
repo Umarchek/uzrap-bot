@@ -77,51 +77,57 @@ const start = () => {
         switch (query.data) {
             case "Doxxim":
                 await bot.sendPhoto(chat.id, 'https://avatars.mds.yandex.net/i?id=c6e00ed80e9628bc82efde8922a2515c-5115418-images-thumbs&n=13', {
-                    caption: `Doxxim taronalarini pasroqda tanglashingiz mumkun !`,
+                    caption: `ᴅᴏxxɪᴍ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Chiroyligim Gulim`,
+                                    text: `ᴄʜɪʀᴏʏʟɪɢɪᴍ ɢᴜʟɪᴍ`,
                                     callback_data: "d-Gulim",
                                 },
                                 {
-                                    text: `Tushlarimga kir`,
+                                    text: `ᴛᴜsʜʟᴀʀɪᴍɢᴀ ᴋɪʀ`,
                                     callback_data: "d-kir",
                                 },
 
                             ],
                             [
                                 {
-                                    text: `U Men uchun`,
+                                    text: `ᴜ ᴍᴇɴ ᴜᴄʜᴜɴ`,
                                     callback_data: "d-uchun",
                                 },
                                 {
-                                    text: `Sevgimiz Tamom`,
+                                    text: `sᴇᴠɢɪᴍɪᴢ ᴛᴀᴍᴏᴍ`,
                                     callback_data: "d-tamom",
                                 },
                             ],
                             [
 
                                 {
-                                    text: `Mayus Taronam`,
+                                    text: `ᴍᴀʏᴜs ᴛᴀʀᴏɴᴀᴍ`,
                                     callback_data: "d-taronam",
                                 },
                                 {
-                                    text: `Kechiring ona`,
+                                    text: `ᴋᴇᴄʜɪʀɪɴɢ ᴏɴᴀ`,
                                     callback_data: "d-ona",
                                 },
                             ],
                             [
 
                                 {
-                                    text: `Eslama Meni`,
+                                    text: `ᴇsʟᴀᴍᴀ ᴍᴇɴɪ`,
                                     callback_data: "d-meni",
                                 },
                                 {
-                                    text: `Qo'g'irchoq`,
-                                    callback_data: "d-irchoq ",
+                                    text: `ǫᴏ'ɢ'ɪʀᴄʜᴏǫ`,
+                                    callback_data: "d-irchoq",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
                                 },
                             ],
                         ],
@@ -131,13 +137,13 @@ const start = () => {
             case "d-Gulim":
                 const Gulim = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, Gulim, {
-                    caption: `Chiroyligim Gulim🎤🎧`,
+                    caption: `ᴄʜɪʀᴏʏʟɪɢɪᴍ ɢᴜʟɪᴍ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -148,13 +154,13 @@ const start = () => {
             case "d-kir":
                 const kir = fs.readFileSync('musics/kir.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, kir, {
-                    caption: `Tushlarimga kir🎤🎧`,
+                    caption: `ᴛᴜsʜʟᴀʀɪᴍɢᴀ ᴋɪʀ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -165,13 +171,13 @@ const start = () => {
             case "d-uchun":
                 const uchun = fs.readFileSync('musics/uchun.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, uchun, {
-                    caption: `U Men uchun🎤🎧`,
+                    caption: `ᴜ ᴍᴇɴ ᴜᴄʜᴜɴ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -182,13 +188,13 @@ const start = () => {
             case "d-tamom":
                 const Tamom = fs.readFileSync('musics/Tamom.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, Tamom, {
-                    caption: `Sevgimiz Tamom🎤🎧`,
+                    caption: `sᴇᴠɢɪᴍɪᴢ ᴛᴀᴍᴏᴍ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -199,13 +205,13 @@ const start = () => {
             case "d-taronam":
                 const taronam = fs.readFileSync('musics/taronam.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, taronam, {
-                    caption: `Mayus Taronam🎤🎧`,
+                    caption: `ᴍᴀʏᴜs ᴛᴀʀᴏɴᴀᴍ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -216,13 +222,13 @@ const start = () => {
             case "d-ona":
                 const ona = fs.readFileSync('musics/ona.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, ona, {
-                    caption: `Kechiring ona🎤🎧`,
+                    caption: `ᴋᴇᴄʜɪʀɪɴɢ ᴏɴᴀ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -233,13 +239,13 @@ const start = () => {
             case "d-meni":
                 const meni = fs.readFileSync('musics/meni.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, meni, {
-                    caption: `Eslama Meni🎤🎧`,
+                    caption: `ᴇsʟᴀᴍᴀ ᴍᴇɴɪ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -250,13 +256,13 @@ const start = () => {
             case "d-irchoq":
                 const irchoq = fs.readFileSync('musics/irchoq.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, irchoq, {
-                    caption: `Qo'g'irchoq🎤🎧`,
+                    caption: `ǫᴏ'ɢ'ɪʀᴄʜᴏǫ🎤🎧`,
                     parse_mode: "HTML",
                     reply_markup: {
                         inline_keyboard: [
                             [
                                 {
-                                    text: `Orqaga ◀️`,
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
                                     callback_data: `Doxxim`,
                                 },
                             ]
@@ -264,6 +270,81 @@ const start = () => {
                     },
                 });
                 break
+            case 'Boshiga':
+                bot.deleteMessage(chatId, message_id);
+                await bot.sendPhoto(
+                    chat.id, "images/first.jpg", {
+                    caption: `Uᴢʀᴇᴘ ᴏʟᴀᴍɪᴅᴀɢɪ ᴇɴɢ ᴍᴀsʜʜᴜʀ ᴠᴀ ᴀsʜᴜʟᴀsɪ ᴋᴏɴɢɪʟɢᴀ ʏᴀǫɪɴ ᴋᴇʟᴀᴅɪɢᴀɴ ʀᴇᴘᴇʀ ᴠᴀ ʜɪᴘʜᴏᴘ ᴜsᴛᴀʟᴀʀɪɴɪ ɪᴊᴏᴅ ᴍᴀʜsᴜʟɪɴɪ ʏᴏʀɪᴛɪʙ ʙᴏʀᴜᴠᴄʜɪ ʙᴏᴛɪᴍɪᴢɢᴀ ʜᴜsʜ ᴋᴇʟɪʙsɪᴢ
+                    ǫᴀʏsɪ ɪᴊᴏᴅᴋᴏʀɪᴍɪᴢɴɪ ᴛᴀɴʟᴀʏsɪᴢ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `💔ᴅᴏxxɪᴍ💔`,
+                                    callback_data: `Doxxim`,
+                                },
+                                {
+                                    text: `❤️‍🩹ᴍ1ɴᴏʀ❤️‍🩹`,
+                                    callback_data: `M1nor`,
+                                },
+                                {
+                                    text: `🔪ᴜᴢʙᴏᴏᴍ🔪`,
+                                    callback_data: `Uzboom`,
+                                },
+                            ],
+                            [
+                                {
+                                    text: `🪓ᴋᴏɴsᴛᴀ🪓`,
+                                    callback_data: `Konsta`,
+                                },
+                                {
+                                    text: `🪚ғᴀʏᴢᴇᴇ🪚`,
+                                    callback_data: `Fayzee`,
+                                },
+                                {
+                                    text: `💉ᴍᴏʀғ💉`,
+                                    callback_data: `Morf`,
+                                },
+
+                            ],
+                            [
+                                {
+                                    text: `🚬ʏᴀɢᴢᴏɴ🚬`,
+                                    callback_data: `yangoz`,
+                                },
+                            ]
+                        ],
+                    },
+
+                })
+            case "M1nor":
+                bot.deleteMessage(chatId, message_id)
+                bot.sendPhoto(chatId, 'https://muzfm.tv/uploads/singers/photos/m1nor.jpg', {
+                    caption: `❤️‍🩹ᴍ1ɴᴏʀ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !❤️‍🩹`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴄʜɪʀᴏʏʟɪɢɪᴍ ɢᴜʟɪᴍ`,
+                                    callback_data: "d-Gulim",
+                                },
+                                {
+                                    text: `ᴛᴜsʜʟᴀʀɪᴍɢᴀ ᴋɪʀ`,
+                                    callback_data: "d-kir",
+                                },
+
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
+                        ],
+                    },
+                })
         }
     });
 }
