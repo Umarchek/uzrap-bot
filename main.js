@@ -784,7 +784,7 @@ const start = () => {
                     },
                 });
                 break
-                case "f-kitobi":
+            case "f-kitobi":
                 const kitobi = fs.readFileSync('musics/f-kitobi.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, kitobi, {
                     caption: `ᴀsɪʀɪɴɢ🎤🎧`,
