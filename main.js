@@ -317,7 +317,10 @@ const start = () => {
                         ],
                     },
 
+
+
                 })
+                break
             case "M1nor":
                 bot.deleteMessage(chatId, message_id)
                 bot.sendPhoto(chatId, 'https://muzfm.tv/uploads/singers/photos/m1nor.jpg', {
@@ -345,6 +348,7 @@ const start = () => {
                         ],
                     },
                 })
+                break
         }
     });
 }
