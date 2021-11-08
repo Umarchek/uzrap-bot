@@ -342,6 +342,41 @@ const start = () => {
                     },
                 })
                 break
+            case "Morf":
+                bot.sendMessage(chatId, '💉ᴍᴏʀғ ᴛᴀʀᴏɴᴀʟᴀʀɪɴɪ ᴘᴀsʀᴏǫᴅᴀ ᴛᴀɴɢʟᴀsʜɪɴɢɪᴢ ᴍᴜᴍᴋᴜɴ !💉', {
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ɴᴀʀᴋᴏᴛɪᴋ`,
+                                    callback_data: "mo-narkotik",
+                                },
+                                {
+                                    text: `ᴍɪʟʟɪᴏɴ`,
+                                    callback_data: "mo-million",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `sᴇᴠɢɪ ʜᴀǫɪᴅᴀ`,
+                                    callback_data: "mo-haqida",
+                                },
+                                {
+                                    text: `ᴋᴇ ʙᴜɢᴜɴᴍᴀs`,
+                                    callback_data: "mo-bugunmas",
+                                },
+                            ],
+                            [
+                                {
+                                    text: `ʙᴏsʜɪɢᴀ 🔝`,
+                                    callback_data: "Boshiga",
+                                },
+                            ],
+                        ],
+                    },
+                })
+                break
             case "d-Gulim":
                 const Gulim = fs.readFileSync('musics/Gulim.mp3'); // sync! that's sad! :-( Just making a point!
                 bot.sendAudio(chatId, Gulim, {
@@ -800,6 +835,74 @@ const start = () => {
                         ],
                     },
                 });
+                break
+            case "mo-narkotik":
+                const narkotik = fs.readFileSync('musics/mo-narkotik.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, narkotik, {
+                    caption: `ɴᴀʀᴋᴏᴛɪᴋ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Morf`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "mo-million":
+                const million = fs.readFileSync('musics/mo-million.mp3'); // sync! that's sad! :-( Just making a point!
+                bot.sendAudio(chatId, million, {
+                    caption: `ᴍɪʟʟɪᴏɴ🎤🎧`,
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Morf`,
+                                },
+                            ]
+                        ],
+                    },
+                });
+                break
+            case "mo-haqida":
+                const haqida = fs.readFileSync('musics/mo-haqida.mp3');
+                bot.sendAudio(chatId, haqida, {
+                    caption: 'ᴋᴇ ʙᴜɢᴜɴᴍᴀs🎤🎧',
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Morf`,
+                                },
+                            ]
+                        ],
+                    },
+                })
+                break
+            case "mo-bugunmas":
+                const bugunmas = fs.readFileSync('musics/mo-bugunmas.mp3');
+                bot.sendAudio(chatId, bugunmas, {
+                    caption: 'sᴇᴠɢɪ ʜᴀǫɪᴅᴀ🎤🎧',
+                    parse_mode: "HTML",
+                    reply_markup: {
+                        inline_keyboard: [
+                            [
+                                {
+                                    text: `ᴏʀǫᴀɢᴀ ◀️`,
+                                    callback_data: `Morf`,
+                                },
+                            ]
+                        ],
+                    },
+                })
                 break
         }
     });
