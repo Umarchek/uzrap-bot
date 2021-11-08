@@ -954,7 +954,7 @@ const start = () => {
                 })
                 break
             case "ya-unu":
-                const ya_unu = fs.readFileSync('musics/ya-ayt.mp3');
+                const ya_unu = fs.readFileSync('musics/ya-aytu.mp3');
                 bot.sendAudio(chatId, ya_unu, {
                     caption: 'ᴜɴᴜᴛᴏʟᴀsᴀɴᴍɪ ᴀʏᴛ🎤🎧',
                     parse_mode: "HTML",
@@ -971,7 +971,7 @@ const start = () => {
                 })
                 break
             case "ya-tuyi":
-                const ya_tuyi = fs.readFileSync('musics/ya-ayt.mp3');
+                const ya_tuyi = fs.readFileSync('musics/ya-tuyi.mp3');
                 bot.sendAudio(chatId, ya_tuyi, {
                     caption: 'ᴀʏᴛ🎤🎧',
                     parse_mode: "HTML",
