@@ -1,5 +1,5 @@
 const TelegramBot = require("node-telegram-bot-api");
-const TOKEN = "1955321733:AAE_g8WJ04Txd0pGTTea8TQbBwJUZK0WP-U";
+const TOKEN = "2091522328:AAGymHbZ1srbZCIHTM-vye3CFO3DdcyyQPI";
 const fs = require('fs')
 const bot = new TelegramBot(TOKEN, {
     polling: true,
@@ -9,6 +9,9 @@ const bot = new TelegramBot(TOKEN, {
     },
 });
 const start = () => {
+    bot.setMyCommands([
+        { command: '/start', description: 'Salomlashish 🙄' },
+    ])
     bot.on("message", async (message) => {
         const { chat, message_id } = message;
         const chatId = message.chat.id;
@@ -988,6 +991,7 @@ const start = () => {
                     },
                 })
                 break
+
         }
     });
 }
